@@ -3,8 +3,10 @@ import java.util.Arrays;
 public class Main {
 
     public static int findMissingNumber(int[] numbers) {
-        Arrays.sort(numbers);
         int missingNumber = 0;
+
+        Arrays.sort(numbers);
+
         for (int i = 0; i < numbers.length; i++) {
             int j = i + 1;
             if (numbers[i] != j) {
@@ -12,6 +14,7 @@ public class Main {
                 break;
             }
         }
+        
         return missingNumber;
     }
 
